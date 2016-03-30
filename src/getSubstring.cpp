@@ -19,19 +19,19 @@ original String
 
 char * get_sub_string(char *str, int i, int j){
 
-	int index = 0;
-	char *result;
-	result = (char*)malloc((sizeof(char)*((j - i) + 1)));
-	if (str == NULL)
+	
+	if (str == NULL ||(i>j))
 		return NULL;
 	else
 	{
+		int index = 0;
+		char *result;
+		result = (char*)malloc(sizeof(char)*((j - i) + 1));
+
 		while (i <= j)
 
 		{
-			result[index] = str[i];
-			index++;
-			i++;
+			result[index++] = str[i++];
 		}
 		result[index] = '\0';
 
